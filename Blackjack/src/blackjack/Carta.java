@@ -1,3 +1,3 @@
-package blackjack;m
+package blackjack;
 public class Carta {
 }
