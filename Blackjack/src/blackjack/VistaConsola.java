@@ -1,11 +1,13 @@
 package blackjack;
 import java.util.*;
 public class VistaConsola {
-    private Scanner entrada;  
+    private Scanner entradaApuesta;  
     private int apuesta;
-    
+    private String decision;
+    private Scanner entradaDecision;
     public VistaConsola(){
-        entrada = new Scanner(System.in);
+        entradaApuesta = new Scanner(System.in);
+        entradaDecision = new Scanner(System.in);
         apuesta = 0;
     }
     
@@ -13,8 +15,15 @@ public class VistaConsola {
         System.out.println("Saludos, bienvenido a Blackjack virtual B-)");
     }
     
-    public void pedirApuesta(){
+    public int pedirApuesta(){
         System.out.println("Por favor ingresa el valor de tu apuesta: ");
-        apuesta = entrada.nextline();
+        apuesta = entradaApuesta.nextInt();
+        return apuesta;
+    }
+    
+    public String plantaoPide(){
+        System.out.println("¿Plantas (p) o pides (P)?");
+        decision = entradaDecision.nextLine();
+        return decision;
     }
 }

@@ -32,6 +32,7 @@ public class Control {
     VistaConsola consola;
     Jugador jugador;
     Crupier crupier;
+    Baraja baraja;
     
     public Control(){ //Constructor de nuestra clase control que maneja CASI todo
         continuar = true;
@@ -52,7 +53,7 @@ public class Control {
             jugador.restarSaldo(consola.pedirApuesta());  //se manda al metodo de restar balance la apuesta que se pide con consola.pedirApuesta
             //  Con la apuesta ya hecha, procedemos a la parte de reparticion
             
-            baraja.repartir(); //Reparte las cartas 2 al jugador, 2 al crupier
+            jugador.tomarCarta(baraja.soltarCarta()); //Reparte las cartas 2 al jugador, 2 al crupier
             
             //Una vez repartidas tenemos que mostrar las cartas
             
@@ -63,12 +64,12 @@ public class Control {
             //Ahora tenemos que preguntarle al jugador si con esas cartas se planta o quiere pedir más
             
             // plantaoPide le pregunta al jugador si planta o pide carta allí mismo,
-            if(VistaConsola.plantaoPide() == "s"){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
-                jugador.tomarCarta();
+            if(consola.plantaoPide() == "p"){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
+                jugador.tomarCarta(baraja.soltarCarta());
                 
             } 
              // EVamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
-            
+          
         }
         
     }

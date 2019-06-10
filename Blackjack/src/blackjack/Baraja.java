@@ -6,15 +6,15 @@ public class Baraja {
 	 
 	//En esta clase tendremos que tener muchos objetos de carta organizados en un array de 52 (el numero de cartas).
 	//En el constructor tenemos que crear ya la baraja
-	Carta carta = new Carta();
 	private static Carta[] baraja;
-	private int robadas;
+	private int robadas, creadas;
+	
 	public Baraja(){
-		baraja[creadas] = new Carta[]
-		for(int valor = 1; valor < 15; i++){
+		baraja = new Carta[52];
+		for(int valor = 1; valor < 15; valor++){
 			for(int palo = 0; palo < 5; palo++){
-				baraja[creadas] = new Carta(valor,palo)
-				creadas++
+				baraja[creadas] = new Carta(valor,palo);
+				creadas++;
 			}
 		}
 		robadas = 0;
@@ -31,9 +31,8 @@ public class Baraja {
 	}//
 	
 	public Carta soltarCarta(){ // Toma la ultima carta de la baraja y la arroja para que la reciba un jugador o crupier
-		return Baraja[creadas-robadas]
 		robadas++;
-
+		return baraja[(creadas-robadas)-1];
 	}//
     
 }
