@@ -59,7 +59,7 @@ public class Control {
                 jugador.tomarCarta();
                 
             } 
-             // Vamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
+             // EVamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
             
         }
         
