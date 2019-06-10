@@ -50,7 +50,7 @@ public class Control {
             consola.saludar(); //saluda y pide la apuesta
             jugador.saldo();
             jugador.restarSaldo(consola.pedirApuesta());  //se manda al metodo de restar balance la apuesta que se pide con consola.pedirApuesta
-            //Con la apuesta ya hecha, procedemos a la parte de reparticion
+            //  Con la apuesta ya hecha, procedemos a la parte de reparticion
             
             baraja.repartir(); //Reparte las cartas 2 al jugador, 2 al crupier
             
