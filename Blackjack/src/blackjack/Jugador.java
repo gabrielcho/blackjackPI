@@ -29,8 +29,7 @@ public class Jugador {
     }
     
     public int verPuntaje(){
-        mano.
-        
+        puntaje = mano.calcularPuntaje();        
         return puntaje;
     }
 }

@@ -3,7 +3,7 @@ import java.util.Vector;
 
 public class Mano {
     private Vector mano;
-
+    private int puntaje;
     public Mano(){
     mano = new Vector();
     }
@@ -12,7 +12,11 @@ public class Mano {
         
     }
     
-    public void calcularPuntaje(){
+    public int calcularPuntaje(){
+        return puntaje;
+    }
+    
+    public void limpiarMano(){ //para empezar otra ronda con todo limpio
         
     }
 }
