@@ -1,10 +1,17 @@
-/* DEADLINE: 12 DE JUNIO
+/* DEADLINE: 12 DE JUNIO 
  * 
  * Dudas:
  * Como haremos para que jugador y Crupier tomen las cartas de una sola baraja?
  * Como haremos para representar la mano de crupier y jugador?
  * Podremos acabar esta mierda a tiempo??????????
  *  Como putas hacemos que jugador y crupier tomen cartas de la misma baraja? Siendo jugador y crupier dos objetos diferentes
+ YA:
+ Hacemos una función de baraja que tire una carta y hacemos una función de jugador y otra de crupier para que tomen una carta arrojada por el metodo de la BAraja
+ tipo   jugador.tomarCarta(baraja.tirarCarta);
+ 		crupier.tomarCarta(baraja.tirarCarta);+
+ 
+ 
+ 
  *  Momento de iluminacion, podemos hacer un metodo en jugador que tome tambien la primera carta de baraja, pero que no la guarde sino que la pase
  como retorno de la funcion para que Crupier la pueda agarrar (algo asi como jugador toma la carta y se la pasa al crupier s o r n e r a m e n t e)
  Aunque tiene mas sentido al reves
@@ -31,6 +38,7 @@ public class Control {
         consola = new VistaConsola();
         jugador = new Jugador();
         crupier = new Crupier();
+        baraja = new Baraja();
     }
     
     public void iniciarJuego(){
