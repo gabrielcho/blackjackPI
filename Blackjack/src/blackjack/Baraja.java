@@ -5,7 +5,7 @@ public class Baraja {
 	//En esta clase tendremos que tener muchos objetos de carta organizados en un array de 52 (el numero de cartas).
 	//En el constructor tenemos que crear ya la baraja
 	Carta carta = new Carta();
-	
+	private static Carta[] baraja;
 	public Baraja(){
 		
 	}//
