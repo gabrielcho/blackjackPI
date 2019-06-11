@@ -1,4 +1,4 @@
-# Swing sisasisa OSIOSI
+# Yeah sisas vamos a quemar durísimo
 ### JFrame
 Es una clase  que se encarga de dibujar y configurar la ventana donde sucederá la magia, viene de la superclase
 ```java
@@ -19,6 +19,10 @@ Ahora algunas referencias para configurar nuestro JFrame
 //al cerrar el programa
 .setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) //El comportamiento al cerrar la ventana
 ```
+
+## Tooltip para lleifreim
+
+
 #### Container
 Es el contenedor dentro de la ventana que se encarga de agrupar "Componentes" Botones, etiquetas.
 
@@ -72,6 +76,6 @@ Toca crear una clase Estucha, se usa una escucha para múltiples objetos gráfic
 Esta escucha transfiere la acción realizada en el objeto a un evento que actúa según lo programado.
 
 
-1. La fuente recibe la acción y la ejecuta (?
-2. La el evento recibe la escucha y actúa con la acción
-3. La escucha recibe la interacción
+1. La escucha recibe la acción
+2. El **evento** recibe la **acción** y ordena algo a la **fuente**
+3. La **fuente** recibe la orden y la ejecuta (?
