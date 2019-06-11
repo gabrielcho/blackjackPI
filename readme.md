@@ -1,4 +1,4 @@
-# Yeah sisas vamos a quemar durísimo
+# Notas: Swing
 ### JFrame
 Es una clase  que se encarga de dibujar y configurar la ventana donde sucederá la magia, viene de la superclase
 ```java
@@ -19,6 +19,9 @@ Ahora algunas referencias para configurar nuestro JFrame
 //al cerrar el programa
 .setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) //El comportamiento al cerrar la ventana
 ```
+####        Método pack();
+Calcula el tamaño de la ventana según los componentes que se vayan a añadir a esta
+Recomendaciones 
 
 ## Tooltip para lleifreim
 
