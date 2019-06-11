@@ -1,7 +1,7 @@
 //Tengo que aprender a manejar mejor este tema de array de objetos puesto que buena parte de esto me tocó emularlo de otro proyecto
 
 package blackjack;
-import java.util.*;
+
 public class Baraja {
 	 
 	//En esta clase tendremos que tener muchos objetos de carta organizados en un array de 52 (el numero de cartas).

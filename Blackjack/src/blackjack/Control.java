@@ -28,7 +28,9 @@ package blackjack;
 import java.util.*;
 public class Control {
     //variables
-    boolean continuar;
+    private String seguir;
+    boolean continuar; 
+    boolean fasedetoma; //fasedetoma
     VistaConsola consola;
     Jugador jugador;
     Crupier crupier;
@@ -64,15 +66,50 @@ public class Control {
             //Ahora tenemos que preguntarle al jugador si con esas cartas se planta o quiere pedir más
             
             // plantaoPide le pregunta al jugador si planta o pide carta allí mismo,
-            if(consola.plantaoPide() == "p"){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
-                jugador.tomarCarta(baraja.soltarCarta());
+            while(fasedetoma == true){
+                if(consola.plantaoPide() == "P"){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
+                    jugador.tomarCarta(baraja.soltarCarta());
+                    jugador.verMano();
+                    jugador.verPuntaje();
+                    if(jugador.verPuntaje() > 21)
+                    {    
+                        volveraJugar();
+                        continue;
+                    }
+                else if(consola.plantaoPide() == "P"){
+                    fasedetoma = false;
+                    jugador.verPuntaje();
+                }   
+
+                } //acaba if
                 
-            } 
-             // EVamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
+                
+            }   //acaba while
+                //Por lo que asumimos que empieza el turno del CRUPIER
+                
+            //Empieza turno CRUPIER
+
+
+        //Aca entonces el man tiene que mostrar ahora si la carta que tenía faltante
+
+
+
+
+
+
+
+
+             //Vamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
           
-        }
+        } //termina bucle
         
     }
     
+    public void volveraJugar(){
+
+        if(consola.volveraJugar() == false)
+        continuar = false;
+        }
+
     
 }

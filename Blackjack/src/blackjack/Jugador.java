@@ -25,7 +25,7 @@ public class Jugador {
     
     public void tomarCarta(Carta talcarta){
         
-        
+        verPuntaje();        
     }
     
     public int verPuntaje(){
