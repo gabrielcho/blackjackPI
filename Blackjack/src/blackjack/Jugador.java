@@ -6,7 +6,7 @@ public class Jugador {
     
     public Jugador(){
         mano = new Mano();
-        saldo = 0;
+        saldo = 10000;
         
     }
     
@@ -20,7 +20,7 @@ public class Jugador {
     }
     
     public void restarSaldo(int valor){
-        saldo =- valor;
+        saldo = saldo - valor;
     }
     
     public void tomarCarta(Carta talcarta){

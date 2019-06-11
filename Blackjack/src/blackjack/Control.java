@@ -100,16 +100,24 @@ public class Control {
 
 
              //Vamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
-          
+            volveraJugar();
         } //termina bucle
-        
+        System.out.println("oof");
     }
     
     public void volveraJugar(){
-
-        if(consola.volveraJugar() == false)
-        continuar = false;
+        if(consola.volveraJugar() == true)
+        { 
+        	System.out.println("elegiste seguir jugando");
         }
+        
+        
+    	
+    else {
+    	continuar = false;
+    	System.out.println("elegiste dejar de  jugar");
+    }
 
     
+    }
 }
