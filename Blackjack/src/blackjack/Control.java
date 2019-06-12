@@ -1,5 +1,5 @@
 /* DEADLINE: 12 DE JUNIO 
- * 
+ *  SISASISA
  * Dudas:
  * Como haremos para que jugador y Crupier tomen las cartas de una sola baraja?
  * Como haremos para representar la mano de crupier y jugador?
