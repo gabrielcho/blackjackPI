@@ -1,8 +1,8 @@
 package blackjack;
-/*Falta:
- * 	- Hacer que no se pueda apostar ms del saldo que se tiene, tipo apuesta negativa
- * 	- Hacer la vista de mano
- * 	- Hacer que tome la carta 
+/* TODO:
+ * 	- Hacer que no se pueda apostar más del saldo que se tiene, tipo apuesta negativa
+ * 	- Hacer la vista de mano (D)
+ * 	- Hacer que tome la carta  (D)
  *  - 
  * 
  * 
@@ -21,8 +21,13 @@ public class Jugador {
     }
     
     public void verMano(){
-        
-        
+    	System.out.println("e");
+    	for(int i=0; i < mano.contar() ; i++ ) {
+    		System.out.println( mano.obtenerCarta(i).mostrarCarta());
+
+    	}
+    	
+    	
     }
     
     public int saldo(){
@@ -30,16 +35,27 @@ public class Jugador {
     }
     
     public void restarSaldo(int valor){
+    	
         saldo = saldo - valor;
     }
     
     public void tomarCarta(Carta talcarta){
-        
-        verPuntaje();        
+    	/*if( 21  < (talcarta.getValor()  + verPuntaje())   )
+        mano.meterCarta(talcarta);
+    	else*/ 
+    	
+    	mano.meterCarta(talcarta);
+    	
+    	verPuntaje();        
     }
     
     public int verPuntaje(){
         puntaje = mano.calcularPuntaje();        
         return puntaje;
+    }
+    
+    public void limpiarJugador() {
+    	
+    	mano.limpiarMano();
     }
 }

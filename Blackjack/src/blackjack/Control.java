@@ -56,9 +56,11 @@ public class Control {
             consola.mostrarSaldo(jugador.saldo());
             jugador.restarSaldo(consola.pedirApuesta());  //se manda al metodo de restar balance la apuesta que se pide con consola.pedirApuesta
             //  Con la apuesta ya hecha, procedemos a la parte de reparticion
+            baraja.barajarCartas();
             
             jugador.tomarCarta(baraja.soltarCarta()); //Reparte las cartas 2 al jugador, 2 al crupier
             jugador.tomarCarta(baraja.soltarCarta());
+          
             //Una vez repartidas tenemos que mostrar las cartas
             
             jugador.verMano(); //Muestra la mano de las cartas obtenidas por Jugador
@@ -68,27 +70,47 @@ public class Control {
             //Ahora tenemos que preguntarle al jugador si con esas cartas se planta o quiere pedir más
             
             // plantaoPide le pregunta al jugador si planta o pide carta allí mismo,
-            String pop;
+            
+          
+            /////////////////////////////////////////// DRAW PHASE //////////////////////////////////////////////////////////////////////////////////
+            
+            
+            String pop; //Este string guarda la P o la p ingresada por el jugador para luego comparar y hacer efectiva la decisi�n
+          
             while(fasedetoma == true){
             	 pop = consola.plantaoPide();
                 if(pop.equals("P")){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
                     jugador.tomarCarta(baraja.soltarCarta());
-                    jugador.verMano();
-                    jugador.verPuntaje();
+                    
+                    
                     if(jugador.verPuntaje() > 21)
-                    {    
+                    {   
+                    	System.out.println("PERDISTE SISAS");
                         volveraJugar();
                         continue;
                     }
+                    jugador.verMano();
+                    System.out.println(jugador.verPuntaje());
                 }
                 else if(pop.equals("p")){
                     fasedetoma = false;
                     jugador.verPuntaje();
                 }
-                else if( !(pop.equals("p")) && !(pop.equals("p"))) {
+                else if( !(pop.equals("P")) && !(pop.equals("p"))) {
                 	consola.noPlantoNiPidio();
                 }                   
-            }   //acaba while
+            }
+            
+            ///////////////////////////////////////////////// CRUPIER PHASE ///////////////////////////////////////////////////////////
+            
+            
+            
+            
+            
+            
+            /////////////////////////////////////////////// EVAL PHASE ////////////////////////////////////////////////////////
+            
+            //acaba while
                 //Por lo que asumimos que empieza el turno del CRUPIER
                 
             //Empieza turno CRUPIER
@@ -97,7 +119,7 @@ public class Control {
         //Aca entonces el man tiene que mostrar ahora si la carta que tenía faltante
 
 
-
+            
 
 
 
@@ -124,4 +146,14 @@ public class Control {
 
     
     }
+    
+    public void jugadorGana() {
+    	
+    }
+
+    public void jugadorPierde() {
+    	
+    }
+
+
 }

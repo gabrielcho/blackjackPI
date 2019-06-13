@@ -1,6 +1,5 @@
-package blackjack;
-/*  TODO:
- *		    
+/* TODO:
+ *		
  *		
  * 		
  * 		
@@ -12,23 +11,22 @@ package blackjack;
  */
 
 
-
+package blackjack;
 import java.util.Vector;
 
 public class Mano {
-    private Vector mano;
+    private Vector<Carta> mano;
     private int puntaje;
     
     public Mano(){
-    mano = new Vector();
+    mano = new Vector<Carta>();
     }
     
 
-    public void tomarCarta(Carta c){
+    public void meterCarta(Carta c){
         if (c != null)
         mano.addElement(c);
-        
-    }
+        }
     
     
     //Cuenta las cartas que tiene en la mano
@@ -74,6 +72,7 @@ public class Mano {
 
     
     public void limpiarMano(){ //para empezar otra ronda con todo limpio
-        
+        mano.clear();
+        System.out.println(contar());
     }
 }

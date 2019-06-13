@@ -1,5 +1,5 @@
 package blackjack;
-
+import static blackjack.utils.println;
 //yeayea
 public class Main {
     

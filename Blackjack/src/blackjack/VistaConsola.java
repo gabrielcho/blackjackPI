@@ -8,6 +8,8 @@ public class VistaConsola {
     private String decision;
     private String son;
     private boolean sigue;
+    
+    
     public VistaConsola(){
         entradaApuesta = new Scanner(System.in);
         entradaDecision = new Scanner(System.in);
@@ -27,7 +29,7 @@ public class VistaConsola {
     }
     
     public String plantaoPide(){
-        System.out.println("Â¿Plantas (p) o pides (P)?");
+        System.out.println("¿Plantas (p) o pides (P)?");
         decision = entradaDecision.nextLine();
         return decision;
     }
@@ -51,6 +53,6 @@ public class VistaConsola {
     }
     
     public void noPlantoNiPidio() {
-    	System.out.println("Ingresa una opcion correcta!");
+    	System.out.println("Ingresa una opciòn correcta!");
     }
 }

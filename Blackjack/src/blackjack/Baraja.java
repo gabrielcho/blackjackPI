@@ -15,12 +15,13 @@ public class Baraja {
 			for(int valor = 1; valor < 14; valor++){
 				baraja[creadas] = new Carta(valor,palo);
 				creadas++;
+				
 			}
 		}
 		robadas = 0;
 	}//
 	
-	public void barajarCartas(){ //Esta función desordena las cartas para aleatorizar la selección de la primera de la baraja
+	public void barajarCartas(){ //Esta funcion desordena las cartas para aleatorizar la selección de la primera de la baraja
 		for ( int i = 51; i > 0; i-- ) {
 			int rand = (int)(Math.random()*(i+1));
 			Carta temp = baraja[i];

@@ -24,7 +24,7 @@ public class Carta {
     public int getValor(){
         return valor;
     }
-    public String getPaloString() {
+    public String paloCarta() {
         switch ( palo ) {
             case espadas: return "Espadas";
             case corazones: return "Corazones";
@@ -33,7 +33,7 @@ public class Carta {
             default: return "??";
         }
     }
-    public String getValorString() {
+    public String valorCarta() {
         switch ( valor ) {
             case 1: return "As";
             case 2: return "2";
@@ -51,8 +51,8 @@ public class Carta {
             default: return "??";
         }
     }
-    public String toString() {
-        return getValorString() + "de" + getPaloString();
+    public String mostrarCarta() {
+        return valorCarta() + " de " + paloCarta();
     }
 }
 
