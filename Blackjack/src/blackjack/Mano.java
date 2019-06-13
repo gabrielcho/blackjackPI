@@ -1,3 +1,16 @@
+/* TODO:
+ *		
+ *		
+ * 		
+ * 		
+ * 		
+ * 		
+ * 		
+ * 		
+ * 		
+ */
+
+
 package blackjack;
 import java.util.Vector;
 
@@ -15,10 +28,13 @@ public class Mano {
         mano.addElement(c);
         
     }
+    
+    
     //Cuenta las cartas que tiene en la mano
     public int contar(){ 
         return mano.size();
     }
+    
     
     //Dice la carta que tiene en la posición pos
     public Carta obtenerCarta(int pos){
@@ -54,8 +70,7 @@ public class Mano {
         valor = valor + 10;
         return valor;
         }
-        
-    }
+
     
     public void limpiarMano(){ //para empezar otra ronda con todo limpio
         

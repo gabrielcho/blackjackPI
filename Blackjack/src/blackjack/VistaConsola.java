@@ -42,4 +42,15 @@ public class VistaConsola {
         }
         return sigue;
     }
+    
+    public void mostrarSaldo(int saldote) {
+    	String saldojugador= "Su saldo es: " + saldote;
+    	System.out.println(saldojugador);
+    	
+    	
+    }
+    
+    public void noPlantoNiPidio() {
+    	System.out.println("Ingresa una opcion correcta!");
+    }
 }
