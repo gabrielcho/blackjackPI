@@ -11,8 +11,8 @@ public class Baraja {
 	
 	public Baraja(){
 		baraja = new Carta[52];
-		for(int valor = 1; valor < 15; valor++){
-			for(int palo = 0; palo < 5; palo++){
+		for(int palo = 0; palo < 4; palo++){
+			for(int valor = 1; valor < 14; valor++){
 				baraja[creadas] = new Carta(valor,palo);
 				creadas++;
 			}

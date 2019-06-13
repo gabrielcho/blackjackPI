@@ -12,7 +12,7 @@ public class VistaConsola {
         entradaApuesta = new Scanner(System.in);
         entradaDecision = new Scanner(System.in);
         entradaSigueono = new Scanner(System.in);
-        
+        sigue = false;
         apuesta = 0;
     }
     
@@ -33,13 +33,24 @@ public class VistaConsola {
     }
     
     public boolean volveraJugar(){
-        System.out.println("Quieres volver a jugar? s/n");
+    	System.out.println("Quieres volver a jugar? s/n");
         son = entradaSigueono.nextLine();
-        if (son == "s")
+        if (son.equals("s")) {
             sigue = true;
-        else
+        }else {
             sigue = false;
-        
+        }
         return sigue;
+    }
+    
+    public void mostrarSaldo(int saldote) {
+    	String saldojugador= "Su saldo es: " + saldote;
+    	System.out.println(saldojugador);
+    	
+    	
+    }
+    
+    public void noPlantoNiPidio() {
+    	System.out.println("Ingresa una opcion correcta!");
     }
 }

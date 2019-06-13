@@ -1,4 +1,14 @@
 package blackjack;
+/*Falta:
+ * 	- Hacer que no se pueda apostar ms del saldo que se tiene, tipo apuesta negativa
+ * 	- Hacer la vista de mano
+ * 	- Hacer que tome la carta 
+ *  - 
+ * 
+ * 
+ * 
+ * 
+ */
 
 public class Jugador {
     private int saldo, puntaje;
@@ -6,7 +16,7 @@ public class Jugador {
     
     public Jugador(){
         mano = new Mano();
-        saldo = 0;
+        saldo = 10000;
         
     }
     
@@ -20,7 +30,7 @@ public class Jugador {
     }
     
     public void restarSaldo(int valor){
-        saldo =- valor;
+        saldo = saldo - valor;
     }
     
     public void tomarCarta(Carta talcarta){

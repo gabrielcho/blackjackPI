@@ -26,6 +26,7 @@ Subir a git por favor cada que se haga un cambio: Se hace en la consola
 
 package blackjack;
 import java.util.*;
+
 public class Control {
     //variables
     private String seguir;
@@ -38,6 +39,7 @@ public class Control {
     
     public Control(){ //Constructor de nuestra clase control que maneja CASI todo
         continuar = true;
+        fasedetoma = true;
         consola = new VistaConsola();
         jugador = new Jugador();
         crupier = new Crupier();
@@ -51,12 +53,12 @@ public class Control {
             
             // Saludar, pedir apuesta
             consola.saludar(); //saluda y pide la apuesta
-            jugador.saldo();
+            consola.mostrarSaldo(jugador.saldo());
             jugador.restarSaldo(consola.pedirApuesta());  //se manda al metodo de restar balance la apuesta que se pide con consola.pedirApuesta
             //  Con la apuesta ya hecha, procedemos a la parte de reparticion
             
             jugador.tomarCarta(baraja.soltarCarta()); //Reparte las cartas 2 al jugador, 2 al crupier
-            
+            jugador.tomarCarta(baraja.soltarCarta());
             //Una vez repartidas tenemos que mostrar las cartas
             
             jugador.verMano(); //Muestra la mano de las cartas obtenidas por Jugador
@@ -66,8 +68,10 @@ public class Control {
             //Ahora tenemos que preguntarle al jugador si con esas cartas se planta o quiere pedir más
             
             // plantaoPide le pregunta al jugador si planta o pide carta allí mismo,
+            String pop;
             while(fasedetoma == true){
-                if(consola.plantaoPide() == "P"){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
+            	 pop = consola.plantaoPide();
+                if(pop.equals("P")){  //bucle que hace al jugador tomar carta y comprobar puntaje hasta que se pase o no quiera tomar mas
                     jugador.tomarCarta(baraja.soltarCarta());
                     jugador.verMano();
                     jugador.verPuntaje();
@@ -76,14 +80,14 @@ public class Control {
                         volveraJugar();
                         continue;
                     }
-                else if(consola.plantaoPide() == "P"){
+                }
+                else if(pop.equals("p")){
                     fasedetoma = false;
                     jugador.verPuntaje();
-                }   
-
-                } //acaba if
-                
-                
+                }
+                else if( !(pop.equals("p")) && !(pop.equals("p"))) {
+                	consola.noPlantoNiPidio();
+                }                   
             }   //acaba while
                 //Por lo que asumimos que empieza el turno del CRUPIER
                 
@@ -100,16 +104,24 @@ public class Control {
 
 
              //Vamos a hacer que la comprobacion del puntaje determine directamente si gano o perdio??
-          
+            volveraJugar();
         } //termina bucle
-        
+        System.out.println("oof");
     }
     
     public void volveraJugar(){
-
-        if(consola.volveraJugar() == false)
-        continuar = false;
+        if(consola.volveraJugar() == true)
+        { 
+        	System.out.println("elegiste seguir jugando");
         }
+        
+        
+    	
+    else {
+    	continuar = false;
+    	System.out.println("elegiste dejar de  jugar");
+    }
 
     
+    }
 }
