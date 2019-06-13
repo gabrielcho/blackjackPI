@@ -1,4 +1,4 @@
-/* TODO:
+/* TODO: 
  *		
  *		
  * 		
@@ -16,7 +16,6 @@ import java.util.Vector;
 
 public class Mano {
     private Vector<Carta> mano;
-    private int puntaje;
     
     public Mano(){
     mano = new Vector<Carta>();
@@ -68,11 +67,12 @@ public class Mano {
         if (as == true && valor + 10 <= 21 )
         valor = valor + 10;
         return valor;
-        }
+    }
 
     
     public void limpiarMano(){ //para empezar otra ronda con todo limpio
         mano.clear();
-        System.out.println(contar());
     }
+    
+ 
 }

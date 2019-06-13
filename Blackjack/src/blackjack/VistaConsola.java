@@ -1,5 +1,5 @@
 package blackjack;
-import java.util.*;
+import java.util.Scanner;
 public class VistaConsola {
     private Scanner entradaApuesta;  
     private Scanner entradaDecision;
@@ -54,5 +54,17 @@ public class VistaConsola {
     
     public void noPlantoNiPidio() {
     	System.out.println("Ingresa una opciòn correcta!");
+    }
+    
+    public void mostrarPuntaje(int puntaje) {
+    	System.out.println("Tu puntaje es:" + puntaje);
+    }
+    
+    public int getApuesta() {
+    	return apuesta;
+    }
+    
+    public void separadorMelo() {
+    	System.out.println("==================================================="); 
     }
 }

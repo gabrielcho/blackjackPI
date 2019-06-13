@@ -12,7 +12,7 @@ public class Carta {
     king = 13;
     
     private final int palo;
-    private final int valor;
+    private int valor;
     
     public Carta(int val, int pal) {
         valor = val;
@@ -24,6 +24,11 @@ public class Carta {
     public int getValor(){
         return valor;
     }
+    
+    public void setValor(int nuevoval) {
+    	valor = nuevoval;
+    }
+    
     public String paloCarta() {
         switch ( palo ) {
             case espadas: return "Espadas";

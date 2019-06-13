@@ -7,9 +7,11 @@ public class Baraja {
 	//En esta clase tendremos que tener muchos objetos de carta organizados en un array de 52 (el numero de cartas).
 	//En el constructor tenemos que crear ya la baraja
 	private static Carta[] baraja;
+	// private Carta as; 
 	private int robadas, creadas;
 	
 	public Baraja(){
+		//as = new Carta(1,1);
 		baraja = new Carta[52];
 		for(int palo = 0; palo < 4; palo++){
 			for(int valor = 1; valor < 14; valor++){
@@ -36,4 +38,7 @@ public class Baraja {
 		return baraja[(creadas-robadas)-1];
 	}//
     
+	/*public Carta tirarAs() { 		//Metodo de prueba para probar el comportamiento del programa cuando hay un As
+		return as;
+	}*/
 }
